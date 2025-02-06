@@ -1,0 +1,157 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+
+
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Botón de inicio */
+.start-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.start-button:hover {
+  background: #218838;
+  transform: scale(1.1);
+}
+
+/* Bloque de ganador */
+.winner-box {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffcc00, #ff0000);
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+  animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.countdown-box {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin-top: 20px;
+  animation: zoom-in 0.5s ease-in-out;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.buzzer-button {
+  margin-top: 20px;
+  padding: 20px 40px;
+  /* Aumenta el tamaño del botón */
+  font-size: 2rem;
+  /* Texto más grande */
+  font-weight: bold;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  /* Botón más redondeado */
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.buzzer-button:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.buzzer-button.disabled {
+  background: gray;
+  cursor: not-allowed;
+  transform: none;
+}
