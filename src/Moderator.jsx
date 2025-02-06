@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { io } from 'socket.io-client';
 import './App.css';
 
-const socket = io('http://localhost:3001');
+const socket = io('https://backend-concurso-de-preguntas-production.up.railway.app/');
 
 export default function Moderator() {
     const [gameActive, setGameActive] = useState(false);
